@@ -3,163 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- لجعل الموقع متجاوب (Responsive)، أي يظهر بشكل جيد على مختلف الشاشات وخاصة الهواتف الذكية والأجهزة اللوحية. -->
-    <!-- name="viewport"
-    → يخبر المتصفح أنك تتحكم في إعدادات عرض الصفحة (viewport settings).
-    
-    content="width=device-width"
-    → يجعل عرض الصفحة يتطابق مع عرض شاشة الجهاز (مثل الجوال أو التابلت).
-    
-    initial-scale=1.0
-    → يحدد مقياس التكبير (zoom) الافتراضي عندما تفتح الصفحة، بحيث لا تكون مكبرة أو مصغرة. -->
-    
-    
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <!-- هو وسيلة لإضافة مكتبة أيقونات اسمها Boxicons إلى موقعك. خليني أشرح بالتفصيل: -->
-
-    <!-- link → يربط ملف CSS خارجي بصفحتك. -->
-
-    <!-- href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' -->
-    <!-- → هذا رابط مباشر إلى ملف CSS الخاص بمكتبة Boxicons (من موقع CDN اسمه unpkg). -->
-    
-    <!-- rel='stylesheet' -->
-    <!-- → يعني هذا الملف هو ملف تنسيق (CSS). -->
-
-    <title>Phon Store</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Mozfer Phone</title>
 </head>
 <body>
-    
-    <h1><i>Phone Store</i></h1>
-  <header>
-   
-    <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#shop">Shop</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div id="menu-icon">&#9776;</div>
-</header>
+    <h1><i>Mozfer Phone</i></h1>
+    <ul>
+      <li><a href="default.asp">Home</a></li>
+      <li><a href="news.asp">News</a></li>
+      <li><a href="contact.asp">Contact</a></li>
+      <li><a href="about.asp">About</a></li>
+    </ul>
   
     <div class="navbar">
-      <div class="auth-links">
+        <div class="nav-right">
+            <form class="search-form">
+              <div class="search-container">
+                <input class="search-input" type="search" placeholder="Search" aria-label="Search">
+                <button class="search-button" type="submit">
+                  <i class='bx bx-search'></i>
+                </button>
+              </div>
+            </form>
+            <div id="dark">
+              <button type="button" class="btn btn-light">Light</button>
+              <button type="button" class="btn btn-dark">Dark</button>
+            </div>
             <div class="auth-links">
-                <a href="login.html">
-                  <i class='bx bxs-user'></i> Login
-                  <!-- هو طريقة لإظهار أيقونة مستخدم (User icon) من مكتبة Boxicons -->
-                </a>
-                <a href="signup.html">
-                    <i class='bx bx-user-plus'></i>Signup
-                  </a>
+              <a href="login.html">
+                <i class='bx bxs-user'></i> Login
+              </a>
+              <a href="#" class="cart-link">
+                <i class='bx bxs-cart'></i> Cart
+              </a>
+            </div>
         </div>
         <hr>
-        <!-- Samsung Galaxy A15 -->
-  <div class="product">
-    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRbKl3m0lhd7fYJUUU-xk48zCTPKWcmXFHKFUTt97Scb5Uep6kNOGvNovhiFebr1KRS67AE4LwtGmvcahpSnEwDyatXN8U4CJfL6x3dlZGsrZ_X3gvbxAFpqznlh7SWpx16a7HbNPfwo50&usqp=CAc" alt="Samsung Galaxy A15" width="150">
-    <h3>Samsung Galaxy A15</h3>
-    <p>Price: <del>700</del> SAR</p>
-    <p>New Price: 650 SAR</p>
-    <button> Add to cart </button>
-  </div>
 
-  <!-- Samsung Galaxy A51 -->
-  <div class="product">
-    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQGtHtoVITnyq1f19gpgkL48bx1cpY01AsZyU3b3BFbRrga_xWgQ-QUsUV7st4lt4D8AiPpV-E-NdJUIIFbHyo4_TyAhbVXp85MKD83Z3Vd1_xG9URc2r9i-osuaS9Ujduo0GuVl7ldIA&usqp=CAc" alt="Samsung Galaxy A51" width="150">
-    <h3>Samsung Galaxy A51</h3>
-    <p>Price: <del>950</del> SAR</p>
-    <p>New Price: 899 SAR</p>
-    <button>Add to Cart</button>
-  </div>
+        <div class="products">
+          <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRbKl3m0lhd7fYJUUU-xk48zCTPKWcmXFHKFUTt97Scb5Uep6kNOGvNovhiFebr1KRS67AE4LwtGmvcahpSnEwDyatXN8U4CJfL6x3dlZGsrZ_X3gvbxAFpqznlh7SWpx16a7HbNPfwo50&usqp=CAc" alt="Samsung Galaxy A15" width="150">
+            <h3>Samsung Galaxy A15</h3>
+            <p>Price: <del>700</del> SAR</p>
+            <p>New Price: 650 SAR</p>
+            <button>Add to Cart</button>
+          </div>
 
-  <!-- Samsung Galaxy A70 -->
-  <div class="product">
-    <img src="https://cdn.akakce.com/samsung/samsung-galaxy-a70-128-gb-siyah-z.jpg" alt="Samsung Galaxy A70" width="150">
-    <h3>Samsung Galaxy A70</h3>
-    <p>Price: <del>1100</del> SAR</p>
-    <p>New Price: 999 SAR</p>
-    <button> + </button>
-  </div>
+          <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQGtHtoVITnyq1f19gpgkL48bx1cpY01AsZyU3b3BFbRrga_xWgQ-QUsUV7st4lt4D8AiPpV-E-NdJUIIFbHyo4_TyAhbVXp85MKD83Z3Vd1_xG9URc2r9i-osuaS9Ujduo0GuVl7ldIA&usqp=CAc" alt="Samsung Galaxy A51" width="150">
+            <h3>Samsung Galaxy A51</h3>
+            <p> Price: 899 SAR</p>
+            <button>Add to Cart</button>
+          </div>
 
-  <!-- Samsung Galaxy A71 -->
-  <div class="product">
-    <img src="data:image/webp;base64,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" alt="Samsung Galaxy A71" width="150">
-    <h3>Samsung Galaxy A71</h3>
-    <p>Price: <del>1300</del> SAR</p>
-    <p>New Price: 1199 SAR</p>
-    <button>Add to Cart</button>
-  </div>
+          <div class="product">
+            <img src="https://cdn.akakce.com/samsung/samsung-galaxy-a70-128-gb-siyah-z.jpg" alt="Samsung Galaxy A70" width="150">
+            <h3>Samsung Galaxy A70</h3>
+            <p>Price: 999 SAR</p>
+            <button>Add to Cart</button>
+          </div>
 
-  <!-- Xiaomi Mi 11 Ultra -->
-<div class="product">
-  <img src="https://m.media-amazon.com/images/I/51VT-Hpx-bS._AC_UF1000,1000_QL80_.jpg" alt="Xiaomi Mi 11 Ultra" width="150">
-  <h3>Xiaomi Mi 11 Ultra</h3>
-  <p>Price: <del>2500</del> SAR</p>
-  <p>New Price: 2399 SAR</p>
-  <button>Add to Cart</button>
-</div>
+          <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTXCFgPiQZLJ6mmrImI9GBalDyxVDpVTDX5G4pkgeaTNbDaATVRkTY_iLXZQmxHIuY6b4HFRv90yU4DzIK6tRHmJEkwjTgyB725lQJdbHC3R4Uv2iNdQsK5-vwCfP5qlAPiplmw3mU8pps&usqp=CAc" alt="Samsung Galaxy A71" width="150">
+            <h3>Samsung Galaxy A71</h3>
+            <p>Price: <del>1300</del> SAR</p>
+            <p>New Price: 1199 SAR</p>
+            <button>Add to Cart</button>
+          </div>
 
-  </div>
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51VT-Hpx-bS._AC_UF1000,1000_QL80_.jpg" alt="Xiaomi Mi 11 Ultra" width="150">
+            <h3>Xiaomi Mi 11 Ultra</h3>
+            <p> Price: 2399 SAR</p>
+            <button>Add to Cart</button>
+          </div>
 
-  <!-- Redmi Note 10 Pro -->
-  <div class="product">
-    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRDDOxFCDMD61V4qpN_avyyNvWpzZvHS4cHFJrXxvi9uiTppNe7NVS_5_ULa0LrAtHzV-ETWcGfA-zszu7OF7aLu3Oo3WKrmWKgywJOXJBcEhF3CBTQvMH63rOvAMsPVeIuMu8FzW8&usqp=CAc" alt="Redmi Note 10 Pro" width="150">
-    <h3>Redmi Note 10 Pro</h3>
-    <p>Price: <del>1100</del> SAR</p>
-    <p>New Price: 999 SAR</p>
-    <button>Add to Cart</button>
-  </div>
+          <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRDDOxFCDMD61V4qpN_avyyNvWpzZvHS4cHFJrXxvi9uiTppNe7NVS_5_ULa0LrAtHzV-ETWcGfA-zszu7OF7aLu3Oo3WKrmWKgywJOXJBcEhF3CBTQvMH63rOvAMsPVeIuMu8FzW8&usqp=CAc" alt="Redmi Note 10 Pro" width="150">
+            <h3>Redmi Note 10 Pro</h3>
+            <p>Price: 999 SAR</p>
+            <button>Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSTyBV_SZMikn0EcOruFGPldG74ui9YD0lVPIUXPdkhqoqyRlJysyuQ50S16iVTaN_4cwOkTvqrKAH0DpHrWXVxlqpizs98zND_t3tQbiQUp_dRfb50p7G8Xnx3sNUVjt_cGa7CAg-3p9g&usqp=CAc" alt="Redmi Note 11 Pro" width="150">
+            <h3>Redmi Note 11 Pro</h3>
+            <p> Price: 1099 SAR</p>
+            <button>Add to Cart</button>
+          </div>
 
-  <!-- Redmi Note 11 Pro -->
-  <div class="product">
-    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSTyBV_SZMikn0EcOruFGPldG74ui9YD0lVPIUXPdkhqoqyRlJysyuQ50S16iVTaN_4cwOkTvqrKAH0DpHrWXVxlqpizs98zND_t3tQbiQUp_dRfb50p7G8Xnx3sNUVjt_cGa7CAg-3p9g&usqp=CAc" alt="Redmi Note 11 Pro" width="150">
-    <h3>Redmi Note 11 Pro</h3>
-    <p>Price: <del>1200</del> SAR</p>
-    <p>New Price: 1099 SAR</p>
-    <button>Add to Cart</button>
-  </div>
+          <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTG8KaO54M4DIMcvDIXCjwxwgeikKmg5BOoqV-fka3ZBGesjQIFxzfG6Sm21sQJUVmAUj6J711BEk7SXAJjbPHryQOzBOG0Sb7ZEjqAjtI&usqp=CAc" alt="POCO F3" width="150">
+            <h3>POCO F3</h3>
+            <p>Price: <del>1500</del> SAR</p>
+            <p>New Price: 1399 SAR</p>
+            <button>Add to Cart</button>
+          </div>
 
-  <!-- Redmi Note 12 Pro -->
-  <div class="product">
-    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTXCFgPiQZLJ6mmrImI9GBalDyxVDpVTDX5G4pkgeaTNbDaATVRkTY_iLXZQmxHIuY6b4HFRv90yU4DzIK6tRHmJEkwjTgyB725lQJdbHC3R4Uv2iNdQsK5-vwCfP5qlAPiplmw3mU8pps&usqp=CAc" alt="Redmi Note 12 Pro" width="150">
-    <h3>Redmi Note 12 Pro</h3>
-    <p>Price: <del>1400</del> SAR</p>
-    <p>New Price: 1299 SAR</p>
-    <button>Add to Cart</button>
-  </div>
+          <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTXCFgPiQZLJ6mmrImI9GBalDyxVDpVTDX5G4pkgeaTNbDaATVRkTY_iLXZQmxHIuY6b4HFRv90yU4DzIK6tRHmJEkwjTgyB725lQJdbHC3R4Uv2iNdQsK5-vwCfP5qlAPiplmw3mU8pps&usqp=CAc" alt="POCO F4" width="150">
+            <h3>POCO F4</h3>
+            <p> Price: 1499 SAR</p>
+            <button>Add to Cart</button>
+          </div>
 
-  <!-- POCO F5 -->
-  <div class="product">
-    <img src="data:image/jpeg;base64,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" alt="POCO F5" width="150">
-    <h3>POCO F5</h3>
-    <p>Price: <del>1800</del> SAR</p>
-    <p>New Price: 1699 SAR</p>
-    <button>Add to Cart</button>
-  </div>
-
-  <!-- POCO F3 -->
-  <div class="product">
-    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTG8KaO54M4DIMcvDIXCjwxwgeikKmg5BOoqV-fka3ZBGesjQIFxzfG6Sm21sQJUVmAUj6J711BEk7SXAJjbPHryQOzBOG0Sb7ZEjqAjtI&usqp=CAc" alt="POCO F3" width="150">
-    <h3>POCO F3</h3>
-    <p>Price: <del>1500</del> SAR</p>
-    <p>New Price: 1399 SAR</p>
-    <button>Add to Cart</button>
-  </div>
-
-    <section>
-    <section class="about">
-    <h2>معلومات عنّا</h2>
-       <p>نحن نقدم أفضل الخدمات لعملائنا في جميع أنحاء العالم.</p>
-    </section>
-    <footer>
-    <p>&copy; 2025 جميع الحقوق محفوظة | <a href="#">سياسة الخصوصية</a> | <a href="#">الشروط والأحكام</a></p>
-    <div class="social-icons">
-    <a href="#"><img src="https://img.freepik.com/premium-psd/facebook-social-media-icon-3d_466778-4384.jpg" alt="Facebook" width="29"></a>
-    <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png" alt="" width="29"></a>
-    <a href="#"><img src="https://freepnglogo.com/images/all_img/1707222563twitter-logo-png.png" alt="Instagram " width="29"></a>
+          <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTXCFgPiQZLJ6mmrImI9GBalDyxVDpVTDX5G4pkgeaTNbDaATVRkTY_iLXZQmxHIuY6b4HFRv90yU4DzIK6tRHmJEkwjTgyB725lQJdbHC3R4Uv2iNdQsK5-vwCfP5qlAPiplmw3mU8pps&usqp=CAc" alt="POCO F5" width="150">
+            <h3>POCO F5</h3>
+            <p>Price: 1699 SAR</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
     </div>
-    </footer>
-
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة | <a href="#">سياسة الخصوصية</a> | <a href="#">الشروط والأحكام</a></p>
+        <div class="social-icons">
+          <a href="#"><img src="https://img.freepik.com/premium-psd/facebook-social-media-icon-3d_466778-4384.jpg" alt="Facebook" width="29"></a>
+          <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png" alt="" width="29"></a>
+          <a href="#"><img src="https://freepnglogo.com/images/all_img/1707222563twitter-logo-png.png" alt="Instagram " width="29"></a>
+          <br>
+          <a href="https://github.com/MOZFER1/coursera-test.git" target="_blank">شاهد المشروع على GitHub</a>
+        </div>
+      </footer>
+      <script src="script.js"></script>
     
 </body>
-    </html>
+</html>
